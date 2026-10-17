@@ -1,0 +1,1294 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Un entorno pensado para la comodidad, la convivencia y la seguridad."><title>Espacios para vivir con tranquilidad | Hogar Raíces de Amor</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxNzZiNTUiLz48ZyBmaWxsPSIjZjRkMzljIj48Y2lyY2xlIGN4PSIzMiIgY3k9IjE4IiByPSI5Ii8+PGNpcmNsZSBjeD0iNDUiIGN5PSIyOSIgcj0iOSIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iNDQiIHI9IjkiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjQ0IiByPSI5Ii8+PGNpcmNsZSBjeD0iMTkiIGN5PSIyOSIgcj0iOSIvPjwvZz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSI3IiBmaWxsPSIjZmZmZGY4Ii8+PC9zdmc+" type="image/svg+xml">  <style>
+:root {
+  color-scheme: light;
+  --green-950: #143b31;
+  --green-900: #194b3d;
+  --green-800: #23634f;
+  --green-700: #34775f;
+  --green-100: #e8f1e9;
+  --green-50: #f4f7f1;
+  --gold-600: #b9772c;
+  --gold-100: #f5ead9;
+  --ink: #26352e;
+  --muted: #617168;
+  --paper: #fffdf9;
+  --line: #dce5dc;
+  --shadow: 0 18px 45px rgb(20 59 49 / 10%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+}
+
+a {
+  color: var(--green-800);
+  text-underline-offset: .18em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--gold-600);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 20;
+  top: 1rem;
+  left: -9999px;
+  padding: .8rem 1rem;
+  border-radius: .5rem;
+  background: white;
+  color: var(--green-950);
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+.wrap {
+  width: min(1120px, 90%);
+  margin-inline: auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--green-100);
+  color: var(--green-950);
+}
+
+
+.site-header {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .7rem 1.5rem;
+  padding: .85rem max(5%, calc((100% - 1240px) / 2));
+  border-bottom: 1px solid rgb(20 59 49 / 7%);
+  background: rgb(255 253 249 / 96%);
+  box-shadow: 0 5px 24px rgb(20 59 49 / 6%);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  width: fit-content;
+  color: var(--green-950);
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid rgb(35 99 79 / 8%);
+  border-radius: 1.05rem;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-size: 1.8rem;
+}
+
+.brand strong {
+  font-size: 1.05rem;
+}
+
+.brand small {
+  display: block;
+  margin-top: .25rem;
+  color: var(--muted);
+  font-size: .76rem;
+  letter-spacing: .02em;
+}
+
+.site-header nav {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: .35rem;
+  padding-top: .4rem;
+  border-top: 1px solid var(--line);
+}
+
+.site-header nav a {
+  padding: .45rem .55rem;
+  border-radius: .55rem;
+  color: #43554b;
+  font-size: .88rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  background: var(--green-100);
+  color: var(--green-900);
+}
+
+.site-header nav a:last-child {
+  color: var(--green-900);
+  font-weight: 750;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(4rem, 8vw, 7rem) 1rem;
+  background:
+    radial-gradient(ellipse at 79% 11%, rgb(255 255 255 / 78%), transparent 29rem),
+    linear-gradient(115deg, #e8f1e8 0%, #f3f1e5 56%, #f8eddb 100%);
+}
+
+.hero:not(.home-hero) {
+  padding-block: clamp(3.25rem, 6vw, 5.25rem);
+  border-bottom: 1px solid rgb(20 59 49 / 7%);
+}
+
+.hero:not(.home-hero)::before {
+  position: absolute;
+  top: 50%;
+  right: max(7%, calc((100% - 1200px) / 2));
+  width: clamp(9rem, 18vw, 15rem);
+  aspect-ratio: 1;
+  border: 1px solid rgb(35 99 79 / 13%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.1rem rgb(35 99 79 / 3%), 0 0 0 2.2rem rgb(35 99 79 / 2%);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.hero:not(.home-hero)::after {
+  right: max(12%, calc((100% - 1080px) / 2));
+  bottom: auto;
+  width: clamp(5rem, 9vw, 7rem);
+  height: clamp(5rem, 9vw, 7rem);
+  border-color: rgb(185 119 44 / 22%);
+  box-shadow: 0 0 0 1rem rgb(185 119 44 / 4%), 0 0 0 2rem rgb(185 119 44 / 2%);
+  transform: translateY(-50%);
+}
+
+.hero::after {
+  position: absolute;
+  right: -5rem;
+  bottom: -11rem;
+  width: 28rem;
+  height: 28rem;
+  border: 1px solid rgb(35 99 79 / 10%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgb(35 99 79 / 3%), 0 0 0 6rem rgb(35 99 79 / 2%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: min(900px, 92%);
+  margin-inline: auto;
+}
+
+.hero:not(.home-hero) .hero-inner {
+  width: min(1120px, 90%);
+}
+
+.hero h1 {
+  max-width: 850px;
+  margin: .4rem 0 1rem;
+  color: var(--green-950);
+  font-size: clamp(2.45rem, 5.3vw, 4.6rem);
+  letter-spacing: -.045em;
+  line-height: 1.08;
+}
+
+.hero:not(.home-hero) h1 {
+  max-width: 760px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.lead {
+  max-width: 700px;
+  margin: 0;
+  color: #485a50;
+  font-size: clamp(1.08rem, 2vw, 1.25rem);
+}
+
+.content {
+  min-height: 40vh;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.content > .eyebrow:first-child {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+}
+
+.content > .eyebrow:first-child::before {
+  width: 1.8rem;
+  height: 2px;
+  background: var(--gold-600);
+  content: "";
+}
+
+.content > h2:first-of-type {
+  max-width: 760px;
+}
+
+.content > p:not(.eyebrow) {
+  color: #526158;
+}
+
+.home-hero {
+  padding-block: clamp(3.75rem, 7vw, 6.5rem);
+}
+
+.contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  border: 1px solid #d8e6d9;
+  border-radius: 1.25rem;
+  background: linear-gradient(120deg, #edf4ec, #f6f1e5);
+}
+
+.contact-strip h2,
+.contact-strip p {
+  margin: 0;
+}
+
+.contact-strip h2 {
+  color: var(--green-950);
+  font-size: 1.45rem;
+}
+
+.contact-strip p {
+  margin-top: .25rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding: 3rem 0 1.5rem;
+  background: var(--green-950);
+  color: #f4f7f2;
+}
+
+.site-footer strong {
+  color: white;
+  font-size: 1.06rem;
+  letter-spacing: .01em;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.site-footer p {
+  margin: .4rem 0;
+  color: #d2ded5;
+}
+
+.site-footer a {
+  display: block;
+  width: fit-content;
+  color: #f4f7f2;
+  text-decoration-color: transparent;
+  text-underline-offset: .2em;
+}
+
+.site-footer a:hover {
+  text-decoration-color: currentColor;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  font-size: .88rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 1.5rem;
+}
+
+
+.eyebrow {
+  margin: 0 0 .65rem;
+  color: var(--green-700);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.content h2 {
+  margin: .35rem 0 .8rem;
+  color: var(--green-950);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -.02em;
+  line-height: 1.2;
+}
+
+.content > p:not(.eyebrow) {
+  max-width: 780px;
+}
+
+.button,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  min-height: 2.9rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: .8rem;
+  background: var(--green-800);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.button:hover,
+button:hover {
+  transform: translateY(-1px);
+  background: var(--green-950);
+  box-shadow: 0 7px 18px rgb(20 59 49 / 18%);
+}
+
+.button:active,
+button:active {
+  transform: translateY(0);
+}
+
+.button-light {
+  border-color: #d4e0d6;
+  box-shadow: 0 5px 14px rgb(20 59 49 / 5%);
+  background: white;
+  color: var(--green-900);
+}
+
+.button-light:hover {
+  background: var(--green-50);
+  color: var(--green-950);
+}
+
+.notice {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--gold-600);
+  border-radius: 0 .65rem .65rem 0;
+  background: #fbf3e7;
+  color: #564a39;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+  margin-top: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.contact-form label {
+  display: grid;
+  gap: .4rem;
+  color: var(--green-950);
+  font-weight: 650;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .8rem .9rem;
+  border: 1px solid #bdcfc4;
+  border-radius: .65rem;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--green-700);
+}
+
+.contact-form .consent {
+  display: flex;
+  align-items: flex-start;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.contact-form .consent input {
+  width: auto;
+  margin-top: .45rem;
+}
+
+.faq {
+  max-width: 820px;
+  margin: 2rem 0;
+}
+
+.faq details {
+  padding: 1.15rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  transition: background-color .18s ease;
+}
+
+.faq details[open] {
+  border-radius: .7rem;
+  background: var(--green-50);
+}
+
+.faq summary {
+  position: relative;
+  padding-right: 2rem;
+  color: var(--green-950);
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  position: absolute;
+  top: -.1rem;
+  right: 0;
+  color: var(--green-700);
+  content: "+";
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq details p {
+  max-width: 720px;
+  margin-bottom: 0;
+  padding-right: 1.5rem;
+  color: var(--muted);
+}
+
+.top-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 4;
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  font-size: 1.3rem;
+}
+
+.top-button.visible {
+  display: inline-flex;
+}
+
+.home-hero .hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, .94fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.75rem);
+  max-width: 1120px;
+}
+
+.home-hero-copy {
+  max-width: 620px;
+}
+
+.home-hero h1 {
+  max-width: 690px;
+  font-size: clamp(2.7rem, 5.2vw, 4.5rem);
+}
+
+.hero-art {
+  position: relative;
+  margin: 0;
+  isolation: isolate;
+}
+
+.hero-art::before {
+  position: absolute;
+  z-index: -1;
+  inset: 10% 3% 9% 7%;
+  border-radius: 48% 48% 2rem 2rem;
+  background: rgb(255 255 255 / 45%);
+  content: "";
+  transform: rotate(3deg);
+}
+
+.hero-art img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 24px 30px rgb(20 59 49 / 12%));
+}
+
+.hero-art figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  max-width: calc(100% - 1rem);
+  padding: .85rem 1.1rem;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 1rem;
+  background: rgb(255 253 249 / 94%);
+  box-shadow: 0 12px 30px rgb(20 59 49 / 12%);
+  backdrop-filter: blur(8px);
+}
+
+.hero-art figcaption strong,
+.hero-art figcaption small {
+  display: block;
+}
+
+.hero-art figcaption strong {
+  color: var(--green-950);
+  font-size: .92rem;
+  line-height: 1.3;
+}
+
+.hero-art figcaption small {
+  margin-top: .15rem;
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.art-sparkle {
+  display: grid;
+  flex: 0 0 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: .9rem;
+  background: var(--gold-100);
+  color: var(--gold-600);
+  font-size: 1.5rem;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.section-heading-spaced {
+  margin-top: 4rem;
+}
+
+.feature-grid,
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: 2rem;
+}
+
+.feature-card,
+.path-card {
+  position: relative;
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #e1e8e0;
+  border-radius: 1rem;
+  background: white;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.feature-card {
+  border-top: 3px solid #d2e2d3;
+  box-shadow: 0 8px 24px rgb(20 59 49 / 4%);
+}
+
+.feature-card:nth-child(2) {
+  border-top-color: #e3ceaa;
+}
+
+.feature-card:nth-child(3) {
+  border-top-color: #c5d9ce;
+}
+
+.path-card:hover {
+  transform: translateY(-3px);
+  border-color: #aac8b1;
+  box-shadow: var(--shadow);
+}
+
+.feature-card h3,
+.path-card h3 {
+  margin: .4rem 0;
+  color: var(--green-950);
+  font-size: 1.3rem;
+}
+
+.feature-card p,
+.path-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-kicker {
+  color: var(--gold-600);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.path-card:focus-visible {
+  outline-offset: 4px;
+}
+
+.path-card .card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--green-800);
+  font-weight: 750;
+}
+
+.contact-strip {
+  box-shadow: 0 12px 28px rgb(20 59 49 / 5%);
+}
+
+.top-button {
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 50%;
+}
+
+.page-feature {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.25rem);
+  margin-block: clamp(2.75rem, 6vw, 5rem);
+}
+
+.page-feature-art {
+  margin: 0;
+}
+
+.page-feature-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.52;
+  border: 1px solid rgb(20 59 49 / 7%);
+  border-radius: 1.35rem;
+  background: var(--green-100);
+  box-shadow: 0 18px 38px rgb(20 59 49 / 10%);
+  object-fit: cover;
+}
+
+.page-feature-art figcaption {
+  margin-top: .7rem;
+  color: var(--muted);
+  font-size: .78rem;
+  letter-spacing: .025em;
+}
+
+.page-feature-content > .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+}
+
+.page-feature-content > .eyebrow::before {
+  width: 1.8rem;
+  height: 2px;
+  background: var(--gold-600);
+  content: "";
+}
+
+.page-feature-content h2 {
+  margin: .35rem 0 .9rem;
+  color: var(--green-950);
+  font-size: clamp(1.8rem, 3.3vw, 2.7rem);
+  letter-spacing: -.025em;
+  line-height: 1.16;
+}
+
+.page-feature-content > p:not(.eyebrow) {
+  color: #526158;
+}
+
+.page-feature-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .7rem;
+  margin-top: 1.35rem;
+}
+
+.page-feature-points article {
+  padding: .9rem;
+  border: 1px solid #e1e8e0;
+  border-radius: .8rem;
+  background: #fff;
+}
+
+.page-feature-points h3 {
+  margin: 0 0 .35rem;
+  color: var(--green-900);
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.page-feature-points p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 1000px) {
+  .site-header {
+    padding-inline: 4%;
+  }
+
+  .site-header nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 0 1rem;
+    padding-block: .75rem;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    min-height: 2.65rem;
+    padding: .65rem 1rem;
+  }
+
+  .site-header nav {
+    display: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .25rem;
+    margin-top: .75rem;
+    padding-top: .65rem;
+  }
+
+  .site-header nav.open {
+    display: grid;
+  }
+
+  .site-header nav a {
+    padding: .65rem .5rem;
+    text-align: left;
+  }
+
+}
+
+@media (max-width: 820px) {
+  .page-feature {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .page-feature-art {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+
+  .hero:not(.home-hero)::before {
+    right: -2.5rem;
+  }
+
+  .hero:not(.home-hero)::after {
+    right: 3rem;
+  }
+
+  .home-hero .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-hero-copy {
+    max-width: 720px;
+  }
+
+  .hero-art {
+    width: min(100%, 590px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-block: 3.5rem;
+  }
+
+  .content {
+    padding-block: 2.75rem;
+  }
+
+  .hero:not(.home-hero) {
+    padding-block: 3rem;
+  }
+
+  .hero:not(.home-hero)::before {
+    right: -5rem;
+    width: 9rem;
+  }
+
+  .hero:not(.home-hero)::after {
+    right: 1.25rem;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .hero:not(.home-hero) h1 {
+    max-width: 85%;
+  }
+
+  .feature-grid,
+  .path-grid,
+  .page-feature-points {
+    grid-template-columns: 1fr;
+  }
+
+  .page-feature-points {
+    gap: .55rem;
+  }
+
+  .page-feature-points article {
+    padding: 1rem;
+  }
+
+  .contact-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 2.5rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .copyright {
+    grid-column: auto;
+    padding-right: 3.25rem;
+  }
+
+  .brand strong {
+    display: block;
+  }
+
+  .hero-art figcaption {
+    right: .25rem;
+    bottom: 5%;
+    padding: .7rem .8rem;
+  }
+
+  .art-sparkle {
+    flex-basis: 2.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-art figcaption {
+    right: 0;
+    bottom: 1%;
+  }
+
+  .hero-art figcaption strong {
+    font-size: .82rem;
+  }
+
+  .hero-art figcaption small {
+    font-size: .7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+  </style>
+</head><body><a class="skip-link" href="#contenido">Saltar al contenido</a><header class="site-header"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✿</span><span>Hogar <strong>Raíces de Amor</strong><small>Cuidado con dignidad y cariño</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menú ☰</button><nav id="site-nav" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="equipo.html">Equipo</a><a href="servicios.html">Servicios</a><a href="instalaciones.html">Instalaciones</a><a href="actividades.html">Actividades</a><a href="tarifas.html">Tarifas</a><a href="ingreso.html">Ingreso</a><a href="visitas.html">Visitas</a><a href="testimonios.html">Testimonios</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a><a href="contacto.html">Contacto</a></nav></header><main id="contenido"><section class="hero"><div class="hero-inner"><p class="eyebrow">HOGAR RAÍCES DE AMOR</p><h1>Espacios para vivir con tranquilidad</h1><p class="lead">Un entorno pensado para la comodidad, la convivencia y la seguridad.</p></div></section><section class="content wrap"><p class="eyebrow">CUIDADO, RESPETO Y CERCANÍA</p><h2>Un ambiente acogedor</h2><p>Las instalaciones y apoyos disponibles se explican durante una visita coordinada.</p><div class="contact-strip"><div><h2>¿Querés saber más?</h2><p>Conversemos sobre tus dudas y cómo podemos orientarte.</p></div><a class="button" href="contacto.html">Ponete en contacto</a></div></section></main><footer class="site-footer"><div class="wrap footer-inner"><div><strong>Hogar Raíces de Amor</strong><p>Cuidado con dignidad, respeto y cariño.</p></div><div><a href="contacto.html">Contacto</a><a href="privacidad.html">Privacidad</a></div><p class="copyright">© <span data-year></span> Hogar Raíces de Amor. Sitio informativo.</p></div></footer><button class="top-button" type="button" aria-label="Volver arriba">↑</button>  <script>
+const embeddedImages = {"equipo":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2Y1ZWFkOSIvPg0KICA8Y2lyY2xlIGN4PSIxMTUiIGN5PSI4NiIgcj0iNDkiIGZpbGw9IiNmZmZkZjkiIG9wYWNpdHk9Ii44Ii8+PGNpcmNsZSBjeD0iNTM1IiBjeT0iMzE2IiByPSI3NCIgZmlsbD0iI2UxZWJkZiIvPg0KICA8cGF0aCBkPSJNMTM4IDM1OGM3LTgyIDU2LTEyNiAxMzAtMTI2czEyNCA0NCAxMzEgMTI2WiIgZmlsbD0iIzM0Nzc1ZiIvPg0KICA8cGF0aCBkPSJNMjcwIDM1OGM2LTEwMyA1OC0xNTggMTQwLTE1OHMxMzUgNTUgMTQxIDE1OFoiIGZpbGw9IiNkOGE2NmMiLz4NCiAgPGNpcmNsZSBjeD0iMjY4IiBjeT0iMTU1IiByPSI2MSIgZmlsbD0iI2VhYmY5MSIvPjxjaXJjbGUgY3g9IjQxMSIgY3k9IjEzMSIgcj0iNjUiIGZpbGw9IiNmMGM5OWQiLz4NCiAgPHBhdGggZD0iTTIwNyAxNTJjLTUtNTYgMTgtOTEgNjYtOTEgNDMgMCA2NyAzMCA2MSA3Ni0yNi03LTQ2LTI0LTU3LTQ4LTEzIDM0LTM3IDU1LTcwIDYzWm0xMzktMjRjLTItNTcgMjQtOTEgNzAtOTEgNDcgMCA3MSAzMyA2OCA4OS0zMS0xMi01NS0zNC02OS02NC0xMyAzNC0zNiA1Ni02OSA2NloiIGZpbGw9IiM2NzUxNDQiLz4NCiAgPHBhdGggZD0iTTI2MCAxNjNoNG0yMiAwaDRtMTEwLTMxaDRtMjQgMGg0IiBzdHJva2U9IiM2MzRhM2EiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0yNjYgMTkwYzEwIDggMjAgOCAzMCAwbTEwNC0xYzEyIDggMjMgOCAzNC0xIiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTZmNTkiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0zMDUgMjc4YzI3IDE5IDU0IDE5IDgxIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPHBhdGggZD0iTTExOCAyODZjMjUtMzUgNTItNTMgODQtNTRtLTc0IDg4YzI3LTIxIDUyLTMwIDgwLTI5IiBzdHJva2U9IiNiOTc3MmMiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==","servicios":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MDAiIGN5PSI4OCIgcj0iNjAiIGZpbGw9IiNmNWVhZDkiLz4NCiAgPHBhdGggZD0iTTMyMCAzNTdTMTI2IDI0OSAxMjYgMTQ3YzAtODMgMTAyLTExMCAxOTQtMjEgOTItODkgMTk0LTYyIDE5NCAyMSAwIDEwMi0xOTQgMjEwLTE5NCAyMTBaIiBmaWxsPSIjMzQ3NzVmIi8+DQogIDxwYXRoIGQ9Ik0zMjAgMzIwUzE2NSAyMzEgMTY1IDE1MWMwLTU3IDczLTc5IDE1NS0yIDgyLTc3IDE1NS01NSAxNTUgMiAwIDgwLTE1NSAxNjktMTU1IDE2OVoiIGZpbGw9IiNmZmZkZjkiLz4NCiAgPHBhdGggZD0iTTMyMCAxMzd2MTE2bS01OC01OGgxMTYiIHN0cm9rZT0iI2I5NzcyYyIgc3Ryb2tlLXdpZHRoPSIyMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0xMDUgMzIyYzMxLTQ2IDY1LTY3IDEwMy02NW0tOTYgOTJjMzItMjcgNjUtNDAgMTAxLTM5IiBzdHJva2U9IiM2ZTliNzIiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjEwNSIgY3k9IjEyNCIgcj0iMTEiIGZpbGw9IiNiOTc3MmMiLz48Y2lyY2xlIGN4PSIxMzYiIGN5PSI5OSIgcj0iOCIgZmlsbD0iI2I5NzcyYyIvPjxjaXJjbGUgY3g9IjE2MCIgY3k9IjEzMiIgcj0iOCIgZmlsbD0iI2I5NzcyYyIvPg0KPC9zdmc+DQo=","visitas":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2Y1ZWFkOSIvPg0KICA8Y2lyY2xlIGN4PSI1MDciIGN5PSI5MSIgcj0iNjEiIGZpbGw9IiNlOGYxZTkiLz4NCiAgPHBhdGggZD0iTTEwNyAzMjljMTItNTkgNDgtOTAgMTA5LTkwczk4IDMxIDExMCA5MFoiIGZpbGw9IiMzNDc3NWYiLz4NCiAgPHBhdGggZD0iTTMwNyAzMjljMTItNTkgNDgtOTAgMTA5LTkwczk4IDMxIDExMCA5MFoiIGZpbGw9IiNkOGE2NmMiLz4NCiAgPGNpcmNsZSBjeD0iMjE2IiBjeT0iMTY4IiByPSI1OCIgZmlsbD0iI2VmYzU5NiIvPjxjaXJjbGUgY3g9IjQxNiIgY3k9IjE2OCIgcj0iNTgiIGZpbGw9IiNlOGI4ODciLz4NCiAgPHBhdGggZD0iTTE1OCAxNjhjLTItNDggMTctNzYgNTktNzYgMzggMCA2MSAyNyA1NiA2OC0yMy04LTQxLTIzLTUyLTQ0LTEwIDMwLTMxIDQ3LTYzIDUyWm0yMDAtMWMtMi00OCAxNy03NiA1OS03NiAzOCAwIDYxIDI3IDU2IDY4LTIzLTgtNDEtMjMtNTItNDQtMTAgMzAtMzEgNDctNjMgNTJaIiBmaWxsPSIjNjg1MDQxIi8+DQogIDxwYXRoIGQ9Ik0yMDAgMTc0aDRtMjYgMGg0bTE1MSAwaDRtMjYgMGg0IiBzdHJva2U9IiM2MzRhM2EiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0yMDAgMTk5YzEwIDggMjAgOCAzMCAwbTE1MSAwYzEwIDggMjAgOCAzMCAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNiNTZmNTkiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0yNzIgMjQyYzE1IDE4IDM0IDI3IDU1IDI3czQwLTkgNTUtMjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxwYXRoIGQ9Ik0zMDAgMjQxYy0xOS0xNC0yNi0yOC0yMC00MiA4LTE3IDMyLTE2IDM1IDIgNS0xOCAyOS0xOSAzNy0yIDYgMTQtMiAyOC0yMSA0MmwtMTYgMTNaIiBmaWxsPSIjYjk3NzJjIi8+DQo8L3N2Zz4NCg==","contacto":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MDQiIGN5PSI4OCIgcj0iNjEiIGZpbGw9IiNmNWVhZDkiLz4NCiAgPHJlY3QgeD0iMTA1IiB5PSI5MCIgd2lkdGg9IjM1NSIgaGVpZ2h0PSIyNDEiIHJ4PSIyOCIgZmlsbD0iI2ZmZmRmOSIvPg0KICA8cGF0aCBkPSJtMTE2IDExOSAxNjcgMTI2IDE2Ny0xMjYiIHN0cm9rZT0iIzM0Nzc1ZiIgc3Ryb2tlLXdpZHRoPSIxNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+DQogIDxwYXRoIGQ9Im0xMTcgMzAzIDExOC0xMDRtMjE1IDEwNEwzMzIgMTk5IiBzdHJva2U9IiNkOGE2NmMiIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8Y2lyY2xlIGN4PSI0NzUiIGN5PSIyNTgiIHI9IjgyIiBmaWxsPSIjMzQ3NzVmIi8+DQogIDxwYXRoIGQ9Ik00NDkgMjE2YzgtMTIgMjMtMTIgMzEtMmwxMiAxNWM1IDcgNCAxNi0yIDIybC0xMCAxMGMxNCAyNSAzMSA0MiA1NiA1NmwxMC0xMGM2LTYgMTUtNyAyMi0ybDE1IDEyYzEwIDggMTAgMjMtMiAzMS0xMyAxMC0yOSAxNC00NCA3LTU1LTI1LTEwMS03MS0xMjYtMTI2LTctMTUtMy0zMSA3LTQ0IDgtMTIgMjMtMTIgMzEtMloiIGZpbGw9IiNmZmZkZjkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05IC0zNSkgc2NhbGUoLjgyKSIvPg0KICA8cGF0aCBkPSJNNTA0IDE1N2MyNi0xMSA1My05IDc4IDdtLTcyIDE5YzE2LTYgMzItNSA0NyA0IiBmaWxsPSJub25lIiBzdHJva2U9IiNiOTc3MmMiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==","preguntas":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2Y1ZWFkOSIvPg0KICA8Y2lyY2xlIGN4PSI0OTciIGN5PSI5MSIgcj0iNjEiIGZpbGw9IiNlOGYxZTkiLz4NCiAgPHBhdGggZD0iTTE1MyA4N2gyNzZhMjggMjggMCAwIDEgMjggMjh2MTk2YTI4IDI4IDAgMCAxLTI4IDI4SDE1M2EyOCAyOCAwIDAgMS0yOC0yOFYxMTVhMjggMjggMCAwIDEgMjgtMjhaIiBmaWxsPSIjZmZmZGY5Ii8+DQogIDxwYXRoIGQ9Ik0xNzggMTQ1aDE3Mm0tMTcyIDQ3aDEzNW0tMTM1IDQ3aDE2MCIgc3Ryb2tlPSIjYzhkOGNhIiBzdHJva2Utd2lkdGg9IjEzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPGNpcmNsZSBjeD0iNDM3IiBjeT0iMjY3IiByPSI4MiIgZmlsbD0iIzM0Nzc1ZiIvPg0KICA8cGF0aCBkPSJNNDE0IDI0NGMwLTI4IDE3LTQ1IDQyLTQ1IDIzIDAgMzkgMTQgMzkgMzYgMCAyMC0xMSAzMS0zMCA0NC05IDYtMTMgMTQtMTMgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjQ1MiIgY3k9IjMyOSIgcj0iNyIgZmlsbD0iI2ZmZmRmOSIvPg0KICA8cGF0aCBkPSJNODEgMzA4YzIyLTM4IDQ4LTU2IDc5LTU0bS03MSA4M2MyNi0xOSA1MS0yOCA3OC0yNiIgc3Ryb2tlPSIjNmU5YjcyIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8Y2lyY2xlIGN4PSIxMDUiIGN5PSIxMjUiIHI9IjgiIGZpbGw9IiNiOTc3MmMiLz48Y2lyY2xlIGN4PSIxMzEiIGN5PSIxMTAiIHI9IjgiIGZpbGw9IiNiOTc3MmMiLz4NCjwvc3ZnPg0K","hogar-raices":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MjAgNjIwIiBmaWxsPSJub25lIj4NCiAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ3YWxsIiB4MT0iMTE4IiB4Mj0iNTk5IiB5MT0iNTciIHkyPSI1NTMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGN0YyRTUiLz4NCiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0RDRTlEQyIvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ3aW5kb3ciIHgxPSIzNDAiIHgyPSI1ODkiIHkxPSIxMTciIHkyPSIzNTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNEN0U4RDkiLz4NCiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0Y0RERCQiIvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSJkcmVzcyIgeDE9IjI4OSIgeDI9IjQwMiIgeTE9IjMxNiIgeTI9IjUwMCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPg0KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzRGODA2OCIvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMjg1QjQ5Ii8+DQogICAgPC9saW5lYXJHcmFkaWVudD4NCiAgICA8ZmlsdGVyIGlkPSJzaGFkb3ciIHdpZHRoPSIxLjQiIGhlaWdodD0iMS40IiB4PSItLjIiIHk9Ii0uMiIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4NCiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEyIi8+DQogICAgPC9maWx0ZXI+DQogICAgPGNsaXBQYXRoIGlkPSJmcmFtZSI+DQogICAgICA8cGF0aCBkPSJNMzc5IDE3M2E4OSA4OSAwIDAgMSAxNzggMHYxNjRIMzc5VjE3M1oiLz4NCiAgICA8L2NsaXBQYXRoPg0KICA8L2RlZnM+DQogIDxlbGxpcHNlIGN4PSIzNjMiIGN5PSI1NDciIGZpbGw9IiMxNDNCMzEiIG9wYWNpdHk9Ii4xIiByeD0iMjUwIiByeT0iMjYiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+DQogIDxwYXRoIGZpbGw9InVybCgjd2FsbCkiIGQ9Ik0xMTIgNTMxVjE5MmMwLTMxIDI1LTU2IDU2LTU2aDM4NWMzMSAwIDU2IDI1IDU2IDU2djMzOUgxMTJaIi8+DQogIDxwYXRoIGZpbGw9IiNCOTc3MkMiIG9wYWNpdHk9Ii4xNCIgZD0iTTExMiA0MzVoNDk3djk2SDExMnoiLz4NCiAgPHBhdGggZmlsbD0iI2ZmZmRmOSIgZD0iTTM1NyAxNzNhMTExIDExMSAwIDAgMSAyMjIgMHYxOTBIMzU3VjE3M1oiLz4NCiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2ZyYW1lKSI+DQogICAgPHBhdGggZmlsbD0idXJsKCN3aW5kb3cpIiBkPSJNMzc5IDkwaDIwMHYyNDdIMzc5eiIvPg0KICAgIDxjaXJjbGUgY3g9IjUxMSIgY3k9IjE1MiIgcj0iMjkiIGZpbGw9IiNFOEI4NkYiLz4NCiAgICA8cGF0aCBmaWxsPSIjQThDN0E5IiBkPSJNMzc5IDI3N2M1My0zMSA4Ny0yNyAxMjYgMCAzMi00NyA1Mi00OSA3NC0zMHY5MEgzNzl2LTYwWiIvPg0KICAgIDxwYXRoIGZpbGw9IiM3RUE4ODkiIGQ9Ik0zNzkgMzA1YzQ5LTMwIDkyLTI1IDEzMCAxIDI5LTI5IDQ4LTMxIDcwLTE0djQ1SDM3OXYtMzJaIi8+DQogICAgPHBhdGggc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjkiIGQ9Ik00NzkgODh2MjQ5bS0xMDAtMTI0aDIwMCIvPg0KICA8L2c+DQogIDxwYXRoIGZpbGw9IiNmZmZkZjkiIGQ9Ik0zNTAgMzU1aDIzN3YxOEgzNTB6Ii8+DQogIDxwYXRoIGZpbGw9IiNDNzhBNDkiIGQ9Ik0yMzYgNDg4aDI1MHYyNEgyMzZ6Ii8+DQogIDxwYXRoIGZpbGw9IiNCOTc3MkMiIGQ9Ik0yNTUgNTExaDEzdjM2aC0xM3ptMjAwIDBoMTN2MzZoLTEzeiIvPg0KICA8cGF0aCBmaWxsPSIjRTlENUI3IiBkPSJNMjYzIDQzMGMwLTIyIDE4LTQwIDQwLTQwaDExNmMyMiAwIDQwIDE4IDQwIDQwdjU4SDI2M3YtNThaIi8+DQogIDxwYXRoIGZpbGw9IiNGOEYyRTciIGQ9Ik0yODEgNDE3YzAtMTcgMTQtMzEgMzEtMzFoMTAwYzE3IDAgMzEgMTQgMzEgMzF2MTlIMjgxdi0xOVoiLz4NCiAgPHBhdGggZmlsbD0iI0NGOUI2OCIgZD0iTTI3OCA0NDBoMjV2MzloLTI1em0xNDIgMGgyNXYzOWgtMjV6Ii8+DQogIDxwYXRoIGZpbGw9IiNGMkM5OTMiIGQ9Ik0zNDAgMjY2Yy00LTM1IDIwLTY0IDUzLTY0IDM0IDAgNTUgMjcgNDkgNjNsLTcgMzdjLTQgMjItMjEgMzctNDMgMzctMjIgMC0zOS0xNS00NC0zN2wtOC0zNloiLz4NCiAgPHBhdGggZmlsbD0iIzZBNEEzOCIgZD0iTTMzOSAyNzBjLTktNDIgMTMtNzcgNTItNzcgMzYgMCA1NSAyNSA1NCA2MS0xMC04LTE5LTE3LTI1LTMwLTEyIDE3LTM1IDI3LTc4IDMxbC0zIDE1Wm04OCAxM2MxMy0xMyAyMS03IDE4IDYtMyAxMS0xMSAxOC0xOSAxN20tNzgtMjRjLTEzLTEzLTIxLTctMTggNiAzIDExIDExIDE4IDE5IDE3IiAvPg0KICA8cGF0aCBzdHJva2U9IiM2OTRCM0EiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzIiBkPSJNMzYzIDI4MGg4bTM1IDBoOCIvPg0KICA8cGF0aCBzdHJva2U9IiNDMTdENjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIzIiBkPSJNMzc4IDMxMGM3IDUgMTUgNSAyMiAwIi8+DQogIDxwYXRoIGZpbGw9InVybCgjZHJlc3MpIiBkPSJNMzA1IDM0OGMxMy0xOCAzMS0yOSA1MS0zMyAxNyAxMyAzNiAxNCA1NCAwIDIyIDQgNDMgMTYgNTcgMzVsMzAgMTEzSDI3OGwyNy0xMTVaIi8+DQogIDxwYXRoIGZpbGw9IiNGMkM5OTMiIGQ9Ik0zNDggMzQ0YzE0IDE2IDQxIDE2IDU2IDBsLTExLTI4aC0zNWwtMTAgMjhaIi8+DQogIDxwYXRoIGZpbGw9IiNEN0ExNzgiIGQ9Ik0zMjcgMzY4Yy0xMSAxMy0xMyAzMC01IDQxbDI4IDM0YzggMTAgMjQtMSAxNi0xMmwtMjEtMzEgMTgtMTQtMzYtMThabTg2IDBjMTEgMTMgMTMgMzAgNSA0MWwtMjggMzRjLTggMTAtMjQtMS0xNi0xMmwyMS0zMS0xOC0xNCAzNi0xOFoiLz4NCiAgPHBhdGggZmlsbD0iI0YyQzk5MyIgZD0iTTM1MiA0MThjNy02IDE3LTUgMjIgMmw5IDEyYzUgNyAzIDE3LTQgMjEtNyA0LTE2IDItMjAtNWwtMTEtMTVjLTQtNS0yLTExIDQtMTVabTQyIDBjLTctNi0xNy01LTIyIDJsLTkgMTJjLTUgNy0zIDE3IDQgMjEgNyA0IDE2IDIgMjAtNWwxMS0xNWM0LTUgMi0xMS00LTE1WiIvPg0KICA8cGF0aCBmaWxsPSIjRThGMUU5IiBkPSJNMTYxIDQ0MmMtMjMtMTktMzEtNDMtMTktNzAgMjMgMTggMzEgNDIgMTkgNzBabTE1LTMzYy03LTI5IDItNTIgMjgtNjggNyAyOC0yIDUyLTI4IDY4Wm0tMTAgNTVjLTE1LTQtMjUtMTUtMjgtMzMgMTYgNCAyNiAxNSAyOCAzM1ptMTQtNzdjLTItMTggNi0zMSAyMy0zOSAyIDE4LTYgMzEtMjMgMzlaIi8+DQogIDxwYXRoIHN0cm9rZT0iIzVFOEI2NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjUiIGQ9Ik0xNjggNDgwYzUtNDEgMTEtNjkgMjQtOTFtLTE3IDY0Yy05LTEzLTE3LTIzLTI3LTMxbTIyIDljNC0xMSAxMC0yMSAxNy0yOSIvPg0KICA8cGF0aCBmaWxsPSIjRDZBQTcyIiBkPSJNMTMxIDQ4MGg3NWwtOCA1MGgtNTlsLTgtNTBaIi8+DQogIDxwYXRoIGZpbGw9IiNFOEYxRTkiIGQ9Ik01NDYgNDIzYy0xNC0xMy0xOC0yOS0xMS00NiAxNCAxMiAxOCAyOCAxMSA0NlptMTAtMjJjLTQtMjAgMy0zNiAyMS00NyA0IDIwLTMgMzYtMjEgNDdabS02IDM4Yy0xMS0zLTE3LTExLTE5LTIzIDExIDMgMTggMTEgMTkgMjNaIi8+DQogIDxwYXRoIHN0cm9rZT0iIzVFOEI2NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjQiIGQ9Ik01NTQgNDU4YzMtMjcgOC00NiAxNy02Mm0tMTIgNDNjLTctOS0xMi0xNi0xOS0yMW0xNiA2YzMtOCA3LTE1IDEyLTIwIi8+DQogIDxwYXRoIGZpbGw9IiNENkFBNzIiIGQ9Ik01MjcgNDU4aDU1bC02IDM5aC00M2wtNi0zOVoiLz4NCiAgPGNpcmNsZSBjeD0iMTc1IiBjeT0iMTY1IiByPSIyOSIgZmlsbD0iI0YyQzk5MyIgb3BhY2l0eT0iLjU1Ii8+DQogIDxwYXRoIGZpbGw9IiNCOTc3MkMiIG9wYWNpdHk9Ii41NSIgZD0iTTE3NCAxNDV2NDBtLTIwLTIwaDQwIi8+DQo8L3N2Zz4NCg==","instalaciones":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2Y1ZWFkOSIvPg0KICA8Y2lyY2xlIGN4PSI0ODkiIGN5PSI4NiIgcj0iNTMiIGZpbGw9IiNmMmM5OTMiLz4NCiAgPHBhdGggZD0iTTczIDMyN2MxMTAtNTEgMjE4LTQzIDMyMiAwczE2NCA0NCAyNDUgNHY4OUg3M1oiIGZpbGw9IiNkN2U3ZDgiLz4NCiAgPHBhdGggZD0iTTEyOCAzMzJWMTc2bDE5Mi0xMjEgMTkyIDEyMXYxNTZaIiBmaWxsPSIjZmZmZGY5Ii8+DQogIDxwYXRoIGQ9Im05NiAxNzggMjI0LTE0MyAyMjQgMTQzLTE5IDI4TDMyMCA3NSAxMTUgMjA2WiIgZmlsbD0iIzM0Nzc1ZiIvPg0KICA8cGF0aCBkPSJNMjYyIDIzMmgxMTZ2MTAwSDI2MnoiIGZpbGw9IiNkZmJkOTYiLz4NCiAgPHBhdGggZD0iTTE2MSAyMDJoNjZ2NjNoLTY2em0yNTMgMGg2NnY2M2gtNjZ6IiBmaWxsPSIjZDdlOWUwIi8+DQogIDxwYXRoIGQ9Ik0xOTQgMjAydjYzbS0zMy0zMWg2Nm0yMjAtMzJ2NjNtLTMzLTMxaDY2IiBzdHJva2U9IiNmZmZkZjkiIHN0cm9rZS13aWR0aD0iNyIvPg0KICA8cGF0aCBkPSJNOTggMzIwYy0yNy00Mi0yMi03OSAxNi0xMTMgMjUgMzggMjEgNzUtMTYgMTEzWm0tNiAzYy00MC04LTYwLTM1LTYyLTgwIDQyIDYgNjMgMzMgNjIgODBaIiBmaWxsPSIjNmU5YjcyIi8+DQogIDxwYXRoIGQ9Ik05NCAzNTFjMi00MiA5LTc4IDIyLTEwOSIgc3Ryb2tlPSIjMzQ3NzVmIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8cGF0aCBkPSJNNTIzIDMyM2MtMjEtMzQtMTctNjQgMTMtOTEgMjAgMzAgMTcgNjAtMTMgOTFabS01IDNjLTMyLTctNDgtMjgtNTAtNjQgMzQgNSA1MSAyNyA1MCA2NFoiIGZpbGw9IiM2ZTliNzIiLz4NCiAgPHBhdGggZD0iTTUyMCAzNTBjMi0zNCA3LTYzIDE4LTg4IiBzdHJva2U9IiMzNDc3NWYiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQo8L3N2Zz4NCg==","testimonios":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MDEiIGN5PSIzMjMiIHI9IjcyIiBmaWxsPSIjZjVlYWQ5Ii8+DQogIDxwYXRoIGQ9Ik0xMDQgODhoMzA3YTMwIDMwIDAgMCAxIDMwIDMwdjEzMmEzMCAzMCAwIDAgMS0zMCAzMEgyNDRsLTgyIDY1di02NWgtNThhMzAgMzAgMCAwIDEtMzAtMzBWMTE4YTMwIDMwIDAgMCAxIDMwLTMwWiIgZmlsbD0iIzM0Nzc1ZiIvPg0KICA8cGF0aCBkPSJNMTY2IDE0MGgxODNtLTE4MyAzOWgxNDJtLTE0MiAzOWgxMDgiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIuOSIvPg0KICA8cGF0aCBkPSJNMzYzIDE5N2gxNjNhMjcgMjcgMCAwIDEgMjcgMjd2ODhhMjcgMjcgMCAwIDEtMjcgMjdoLTI5bC01OCA0NHYtNDRoLTc2YTI3IDI3IDAgMCAxLTI3LTI3di04OGEyNyAyNyAwIDAgMSAyNy0yN1oiIGZpbGw9IiNkOGE2NmMiLz4NCiAgPHBhdGggZD0iTTQxOCAyNDFoNTltLTU5IDMyaDQwIiBzdHJva2U9IiNmZmZkZjkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8cGF0aCBkPSJNNDczIDczYy0xNi0xNC0yMi0yNy0xNi00MCA3LTE2IDI5LTE1IDMzIDIgNS0xNyAyNy0xOCAzNC0yIDYgMTMtMSAyNi0xOCA0MGwtMTYgMTNaIiBmaWxsPSIjYjk3NzJjIi8+DQo8L3N2Zz4NCg==","actividades":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MjciIGN5PSI5NCIgcj0iNjEiIGZpbGw9IiNmNWVhZDkiLz4NCiAgPHBhdGggZD0iTTEzMCAzMjljMTQtNDUgNDktNzEgOTQtNzEgNDQgMCA3OCAyNiA5MiA3MVoiIGZpbGw9IiNkOGE2NmMiLz4NCiAgPHBhdGggZD0iTTMxMCAzMjljMTQtNDUgNDktNzEgOTQtNzEgNDQgMCA3OCAyNiA5MiA3MVoiIGZpbGw9IiMzNDc3NWYiLz4NCiAgPGNpcmNsZSBjeD0iMjI0IiBjeT0iMTk2IiByPSI0OSIgZmlsbD0iI2VmYzU5NiIvPjxjaXJjbGUgY3g9IjQwNCIgY3k9IjE5NiIgcj0iNDkiIGZpbGw9IiNlOGI4ODciLz4NCiAgPHBhdGggZD0iTTE3NSAxOTNjLTMtNDMgMTUtNjkgNTAtNjkgMzQgMCA1MiAyNCA0OCA2MC0yMC03LTM2LTIwLTQ1LTM4LTkgMjYtMjcgNDItNTMgNDdabTE4MCAwYy0zLTQzIDE1LTY5IDUwLTY5IDM0IDAgNTIgMjQgNDggNjAtMjAtNy0zNi0yMC00NS0zOC05IDI2LTI3IDQyLTUzIDQ3WiIgZmlsbD0iIzY4NTA0MSIvPg0KICA8cGF0aCBkPSJNMjA2IDIwMmgzbTI2IDBoM20xNDkgMGgzbTI2IDBoMyIgc3Ryb2tlPSIjNjM0YTNhIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8cGF0aCBkPSJNMjAyIDIyNmM5IDcgMTkgNyAyOCAwbTE1MSAwYzkgNyAxOSA3IDI4IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2I1NmY1OSIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPHBhdGggZD0iTTI3OCAxMThjLTYtMjMtMjEtMzQtNDQtMzIgNyAyMiAyMiAzMyA0NCAzMlptNzctMjVjMTEtMjEgMjgtMjcgNDktMTctMTIgMTktMjggMjUtNDkgMTdaIiBmaWxsPSIjNmU5YjcyIi8+DQogIDxwYXRoIGQ9Ik0zMjEgMTgwYy0yOC0yMi0zOC00My0zMC02NSAxMS0yNSA0Ni0yMyA1MCAyIDgtMjUgNDMtMjcgNTQtMiA5IDIyLTIgNDMtMzAgNjVsLTIyIDE3WiIgZmlsbD0iI2Q0OGI2NCIvPg0KICA8cGF0aCBkPSJNMzIwIDE4MGg1MSIgc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPC9zdmc+DQo=","nosotros":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MDYiIGN5PSI5MiIgcj0iNjIiIGZpbGw9IiNmNWVhZDkiLz4NCiAgPHBhdGggZD0iTTAgMzEwYzEwNS03MiAxODAtNDcgMjY0IDZzMTcwIDUyIDM3Ni0zM3YxMzdIMFoiIGZpbGw9IiNjN2RkYzciLz4NCiAgPHBhdGggZD0ibTE0NSAyMDggMTc1LTEzMCAxNzUgMTMwdjE0OEgxNDVaIiBmaWxsPSIjZmZmZGY5Ii8+DQogIDxwYXRoIGQ9Im0xMTkgMjEwIDIwMS0xNTEgMjAyIDE1MS0yMCAyNkwzMjAgOTkgMTM5IDIzNloiIGZpbGw9IiMzNDc3NWYiLz4NCiAgPHBhdGggZD0iTTI2MCAyMzhoMTIwdjExOEgyNjB6IiBmaWxsPSIjZDhhNjZjIi8+DQogIDxwYXRoIGQ9Ik0xODEgMjMwaDU4djU4aC01OHptMjIwIDBoNTh2NThoLTU4eiIgZmlsbD0iI2RiZTlkZiIvPg0KICA8cGF0aCBkPSJNMjEwIDIzMHY1OG0tMjktMjloNThtMTYyLTI5djU4bS0yOS0yOWg1OCIgc3Ryb2tlPSIjZmZmZGY5IiBzdHJva2Utd2lkdGg9IjciLz4NCiAgPHBhdGggZD0iTTUwNSAzMjBjLTMwLTU0LTIzLTEwMSAyMy0xNDQgMjggNDggMjEgOTQtMjMgMTQ0Wm0tOCAzYy00OS0xMC03NS00My03OC0xMDAgNTEgOCA3NyA0MSA3OCAxMDBaIiBmaWxsPSIjNmU5YjcyIi8+DQogIDxwYXRoIGQ9Ik01MDEgMzU1YzMtNTIgMTItOTcgMjctMTM1IiBzdHJva2U9IiMzNDc3NWYiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjExMiIgY3k9IjEwOSIgcj0iMTAiIGZpbGw9IiNiOTc3MmMiLz48Y2lyY2xlIGN4PSIxMzkiIGN5PSIxMDkiIHI9IjEwIiBmaWxsPSIjYjk3NzJjIi8+PGNpcmNsZSBjeD0iMTY2IiBjeT0iMTA5IiByPSIxMCIgZmlsbD0iI2I5NzcyYyIvPg0KPC9zdmc+DQo=","tarifas":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2Y1ZWFkOSIvPg0KICA8Y2lyY2xlIGN4PSI0OTUiIGN5PSI5NSIgcj0iNjciIGZpbGw9IiNlOGYxZTkiLz4NCiAgPHBhdGggZD0iTTE4OSA2MmgyNDVsNzQgNzR2MjM0SDE4OVoiIGZpbGw9IiNmZmZkZjkiLz4NCiAgPHBhdGggZD0iTTQzNCA2MnY3NGg3NCIgZmlsbD0iI2Q5ZThkYiIvPg0KICA8cGF0aCBkPSJNMjQyIDE3MWgxNDJtLTE0MiAzOWgxODVtLTE4NSAzOWgxNTEiIHN0cm9rZT0iI2I4Y2JiOSIgc3Ryb2tlLXdpZHRoPSIxMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxyZWN0IHg9IjI0NSIgeT0iMjgyIiB3aWR0aD0iMTQyIiBoZWlnaHQ9IjQ5IiByeD0iMTUiIGZpbGw9IiMzNDc3NWYiLz4NCiAgPHBhdGggZD0iTTI3MyAzMDZoODUiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSI4IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPGNpcmNsZSBjeD0iMTUxIiBjeT0iMjkyIiByPSI0OSIgZmlsbD0iI2Q4YTY2YyIvPjxwYXRoIGQ9Ik0xNTEgMjYzdjU4bS0yMC00MWMwLTEyIDQwLTEzIDQwIDBzLTQwIDEwLTQwIDIyIDQwIDEyIDQwIDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmRmOSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPHBhdGggZD0iTTQ1NSAzMTJjMTMtMjAgMjktMzAgNDktMzBtLTQzIDUxYzE3LTEzIDMyLTE5IDQ5LTE4IiBzdHJva2U9IiM2ZTliNzIiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+DQogIDxjaXJjbGUgY3g9IjQ2OCIgY3k9IjI0NSIgcj0iOCIgZmlsbD0iI2I5NzcyYyIvPjxjaXJjbGUgY3g9IjQ5MyIgY3k9IjIzMCIgcj0iOCIgZmlsbD0iI2I5NzcyYyIvPg0KPC9zdmc+DQo=","ingreso":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNDIwIj4NCiAgPHJlY3Qgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MjAiIHJ4PSIzMiIgZmlsbD0iI2U4ZjFlOSIvPg0KICA8Y2lyY2xlIGN4PSI1MjEiIGN5PSI3NyIgcj0iNTEiIGZpbGw9IiNmNWVhZDkiLz4NCiAgPHBhdGggZD0iTTExMSAzNTJjMTEwLTY5IDIyOC03OSAzNTQgMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmRkN2JlIiBzdHJva2Utd2lkdGg9IjQzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCiAgPHBhdGggZD0iTTE4NyAzNDhWMTQ3bDEzMy05MSAxMzMgOTF2MjAxWiIgZmlsbD0iI2ZmZmRmOSIvPg0KICA8cGF0aCBkPSJtMTYwIDE1MSAxNjAtMTEyIDE2MCAxMTItMTcgMjQtMTQzLTk5LTE0MyA5OVoiIGZpbGw9IiMzNDc3NWYiLz4NCiAgPHBhdGggZD0iTTI2NyAyMjhWMTY3YTUzIDUzIDAgMCAxIDEwNiAwdjE4MUgyNjdaIiBmaWxsPSIjZDhhNjZjIi8+DQogIDxjaXJjbGUgY3g9IjM0OSIgY3k9IjI1NCIgcj0iNiIgZmlsbD0iI2ZmZmRmOSIvPg0KICA8cGF0aCBkPSJNNzAgMzQ1YzQwLTE2IDc0LTE4IDEwNS02bTI5MC0xMGMzNS0xMiA2OS0xMSAxMDQgMyIgc3Ryb2tlPSIjNmU5YjcyIiBzdHJva2Utd2lkdGg9IjgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KICA8cGF0aCBkPSJNMTA1IDMyNmMtMTktMzEtMTUtNTggMTItODIgMTggMjcgMTUgNTQtMTIgODJabS00IDNjLTI5LTYtNDMtMjUtNDUtNTggMzEgNSA0NiAyNCA0NSA1OFoiIGZpbGw9IiM2ZTliNzIiLz4NCiAgPHBhdGggZD0iTTUyMCAzMjljLTE5LTMxLTE1LTU4IDEyLTgyIDE4IDI3IDE1IDU0LTEyIDgyWm0tNCAzYy0yOS02LTQzLTI1LTQ1LTU4IDMxIDUgNDYgMjQgNDUgNThaIiBmaWxsPSIjNmU5YjcyIi8+DQogIDxwYXRoIGQ9Ik05MyAzNTZjNC0yNSA5LTQ4IDE5LTY5bTQwMCA2OGM0LTI1IDktNDggMTktNjkiIHN0cm9rZT0iIzM0Nzc1ZiIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjwvc3ZnPg0K"};
+document.addEventListener('DOMContentLoaded', () => {
+  const pageDetails = {
+    'nosotros.html': {
+      image: 'nosotros.svg',
+      alt: 'Ilustración de un hogar rodeado de naturaleza, símbolo de comunidad y pertenencia.',
+      label: 'NUESTRA ESENCIA',
+      title: 'Un hogar se construye con respeto',
+      paragraphs: [
+        'En Hogar Raíces de Amor ponemos en el centro la dignidad, la historia y las preferencias de cada persona.',
+        'Queremos que las familias encuentren un espacio de diálogo para conocer el enfoque del hogar y decidir con información clara.'
+      ],
+      points: [
+        ['Dignidad', 'Escuchar y respetar las decisiones de cada persona.'],
+        ['Cercanía', 'Construir relaciones basadas en confianza y comunicación.'],
+        ['Bienestar', 'Valorar los pequeños momentos que dan sentido a cada día.']
+      ]
+    },
+    'equipo.html': {
+      image: 'equipo.svg',
+      alt: 'Ilustración de dos personas conversando con cercanía.',
+      label: 'PERSONAS QUE ACOMPAÑAN',
+      title: 'La confianza también forma parte del cuidado',
+      paragraphs: [
+        'El acompañamiento comienza con una conversación atenta con la persona mayor y su familia.',
+        'Al contactarnos, podés preguntar cómo se organiza la comunicación, quiénes participan en el cuidado y cómo se comparten las inquietudes.'
+      ],
+      points: [
+        ['Escucha', 'Compartí lo que es importante para la persona y su familia.'],
+        ['Comunicación', 'Consultá cuál es el canal de contacto y cómo se coordinan las novedades.'],
+        ['Claridad', 'Solicitá información confirmada sobre funciones y experiencia del equipo.']
+      ]
+    },
+    'servicios.html': {
+      image: 'servicios.svg',
+      alt: 'Ilustración de un corazón verde con un símbolo de cuidado en el centro.',
+      label: 'ACOMPAÑAMIENTO PERSONALIZADO',
+      title: 'Hablemos de las necesidades de cada persona',
+      paragraphs: [
+        'Cada persona tiene rutinas, preferencias y necesidades distintas. Por eso, la conversación con la familia ayuda a aclarar qué apoyos se requieren y cuáles están disponibles.',
+        'La información concreta sobre servicios, horarios y condiciones se confirma directamente con el hogar.'
+      ],
+      points: [
+        ['Rutinas cotidianas', 'Conversá sobre hábitos, preferencias y apoyos necesarios.'],
+        ['Acompañamiento', 'Preguntá cómo se promueven la participación y la autonomía.'],
+        ['Alcance del servicio', 'Confirmá qué está incluido y qué requiere coordinación aparte.']
+      ]
+    },
+    'instalaciones.html': {
+      image: 'instalaciones.svg',
+      alt: 'Ilustración de una casa acogedora rodeada de plantas y luz natural.',
+      label: 'CONOCÉ LOS ESPACIOS',
+      title: 'Una visita ayuda a imaginar el día a día',
+      paragraphs: [
+        'Las fotografías no reemplazan la experiencia de conocer el lugar. Coordiná una visita para recorrerlo y hacer preguntas sobre los espacios disponibles.',
+        'La disponibilidad, las características y las condiciones de cada espacio deben confirmarse directamente durante la visita.'
+      ],
+      points: [
+        ['Descanso', 'Preguntá por las opciones y condiciones de los espacios para descansar.'],
+        ['Convivencia', 'Conocé dónde se realizan los encuentros y las actividades compartidas.'],
+        ['Accesibilidad', 'Consultá cómo se adapta el entorno a las necesidades de movilidad.']
+      ]
+    },
+    'actividades.html': {
+      image: 'actividades.svg',
+      alt: 'Ilustración de dos personas mayores compartiendo un momento agradable.',
+      label: 'TIEMPO PARA COMPARTIR',
+      title: 'Participar también es elegir',
+      paragraphs: [
+        'Las actividades pueden ser una oportunidad para conversar, crear y compartir. Lo importante es respetar los intereses, el ritmo y las preferencias de cada persona.',
+        'Las propuestas de abajo son ideas para conversar; la programación disponible se confirma con el hogar.'
+      ],
+      points: [
+        ['Creatividad', 'Manualidades, dibujo u otras actividades expresivas.'],
+        ['Encuentro', 'Lectura, música y conversaciones en grupo o en compañía.'],
+        ['A su propio ritmo', 'Preguntá cómo se ajustan las propuestas a las preferencias individuales.']
+      ]
+    },
+    'tarifas.html': {
+      image: 'tarifas.svg',
+      alt: 'Ilustración de una hoja de información y una moneda, para representar claridad en las tarifas.',
+      label: 'INFORMACIÓN CLARA',
+      title: 'Consultá el costo y qué incluye',
+      paragraphs: [
+        'El costo puede depender de los apoyos requeridos y de los servicios acordados. Para comparar opciones, pedí una explicación actualizada y por escrito.',
+        'No publicamos cifras estimadas: los precios, condiciones y disponibilidad deben confirmarse directamente con el hogar.'
+      ],
+      points: [
+        ['Servicios incluidos', 'Solicitá el detalle de lo que contempla la tarifa.'],
+        ['Necesidades individuales', 'Explicá qué apoyos se requieren para recibir información pertinente.'],
+        ['Condiciones', 'Consultá periodicidad, posibles cargos adicionales y formas de pago.']
+      ]
+    },
+    'ingreso.html': {
+      image: 'ingreso.svg',
+      alt: 'Ilustración de la entrada de un hogar abierta a un camino tranquilo.',
+      label: 'UN PASO A LA VEZ',
+      title: 'Un proceso conversado, con expectativas claras',
+      paragraphs: [
+        'Consultar por un ingreso empieza con una conversación sobre la persona, sus necesidades y lo que espera la familia.',
+        'Los criterios, documentos, disponibilidad y plazos pueden variar. Pedí al hogar la información vigente antes de preparar el siguiente paso.'
+      ],
+      points: [
+        ['Primera consulta', 'Compartí tus preguntas y pedí orientación inicial.'],
+        ['Conocer opciones', 'Consultá por una visita y por los apoyos disponibles.'],
+        ['Confirmar requisitos', 'Solicitá la lista actualizada de documentos, condiciones y tiempos.']
+      ]
+    },
+    'visitas.html': {
+      image: 'visitas.svg',
+      alt: 'Ilustración de una persona mayor y un familiar compartiendo una visita.',
+      label: 'UN PRIMER ENCUENTRO',
+      title: 'Conocé el hogar y conversá con calma',
+      paragraphs: [
+        'Una visita permite conocer los espacios, plantear dudas y entender mejor cómo podría ser la experiencia cotidiana.',
+        'Escribinos antes de acercarte para confirmar día y hora, disponibilidad y cualquier pauta vigente para las visitas.'
+      ],
+      points: [
+        ['Coordiná con anticipación', 'Acordá el horario directamente con el hogar.'],
+        ['Prepará tus preguntas', 'Anotá dudas sobre atención, convivencia y comunicación.'],
+        ['Conocé los pasos siguientes', 'Al finalizar, consultá cómo recibir información adicional.']
+      ]
+    },
+    'testimonios.html': {
+      image: 'testimonios.svg',
+      alt: 'Ilustración de globos de conversación que representan experiencias compartidas.',
+      label: 'ESCUCHAR CON RESPETO',
+      title: 'Cada experiencia merece ser contada con permiso',
+      paragraphs: [
+        'La confianza de residentes y familias es importante. Por respeto a su privacidad, no publicamos citas ni historias sin autorización expresa.',
+        'Esta sección se completará con experiencias reales únicamente cuando el hogar cuente con el consentimiento correspondiente.'
+      ],
+      points: [
+        ['Voces auténticas', 'Las historias deben corresponder a experiencias reales.'],
+        ['Consentimiento', 'La publicación requiere autorización de quien comparte su testimonio.'],
+        ['Privacidad', 'La identidad y los detalles personales se protegen según lo acordado.']
+      ]
+    },
+    'preguntas-frecuentes.html': {
+      image: 'preguntas.svg',
+      alt: 'Ilustración de una hoja de notas junto a un signo de interrogación.',
+      label: 'RESOLVÉ TUS DUDAS',
+      title: 'Preguntar es parte de tomar una buena decisión',
+      paragraphs: [
+        'Cada situación es distinta. Usá estas preguntas como guía para iniciar una conversación y confirmá los detalles directamente con el hogar.',
+        'La información sobre disponibilidad, requisitos, servicios y precios puede cambiar; pedí siempre la versión vigente.'
+      ],
+      points: [
+        ['¿Qué información conviene compartir?', 'Lo necesario para explicar la consulta y las necesidades de apoyo.'],
+        ['¿Puedo conocer el lugar?', 'Sí; contactá al hogar para consultar disponibilidad y coordinar una visita.'],
+        ['¿Dónde confirmo los requisitos?', 'Solicitá al hogar los criterios y documentos actualizados antes de iniciar el proceso.']
+      ]
+    },
+    'contacto.html': {
+      image: 'contacto.svg',
+      alt: 'Ilustración de un sobre y un teléfono para representar los canales de contacto.',
+      label: 'ESTAMOS PARA ESCUCHARTE',
+      title: 'Contanos qué necesitás saber',
+      paragraphs: [
+        'Podés usar el formulario para preparar un mensaje y compartir tus preguntas sobre visitas, servicios, tarifas o ingreso.',
+        'El formulario abre tu aplicación de correo; no envía la información automáticamente. Revisá el mensaje antes de enviarlo y evitá incluir datos sensibles innecesarios.'
+      ],
+      points: [
+        ['Tu consulta', 'Indicá brevemente qué información necesitás.'],
+        ['Un medio de respuesta', 'Verificá que el correo o teléfono que compartís sea correcto.'],
+        ['Privacidad', 'Compartí solo la información necesaria para responder tu consulta.']
+      ]
+    }
+  };
+
+  const createTextElement = (tagName, className, text) => {
+    const element = document.createElement(tagName);
+    if (className) {
+      element.className = className;
+    }
+    element.textContent = text;
+    return element;
+  };
+
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const detail = pageDetails[currentPage];
+  const hero = document.querySelector('.hero:not(.home-hero)');
+
+  if (detail && hero) {
+    const section = document.createElement('section');
+    section.className = 'page-feature wrap';
+    section.setAttribute('aria-labelledby', 'page-feature-title');
+
+    const figure = document.createElement('figure');
+    figure.className = 'page-feature-art';
+    const image = document.createElement('img');
+    image.src = embeddedImages[detail.image.replace(/\.svg$/, '')];
+    image.alt = detail.alt;
+    image.width = 640;
+    image.height = 420;
+    image.loading = 'eager';
+    const caption = createTextElement('figcaption', '', `Hogar Raíces de Amor · ${detail.label.toLowerCase()}`);
+    figure.append(image, caption);
+
+    const content = document.createElement('div');
+    content.className = 'page-feature-content';
+    content.append(
+      createTextElement('p', 'eyebrow', detail.label),
+      createTextElement('h2', '', detail.title)
+    );
+    content.querySelector('h2').id = 'page-feature-title';
+    detail.paragraphs.forEach(paragraph => {
+      content.append(createTextElement('p', '', paragraph));
+    });
+
+    const points = document.createElement('div');
+    points.className = 'page-feature-points';
+    detail.points.forEach(([title, description]) => {
+      const point = document.createElement('article');
+      point.append(
+        createTextElement('h3', '', title),
+        createTextElement('p', '', description)
+      );
+      points.append(point);
+    });
+    content.append(points);
+    section.append(figure, content);
+    hero.after(section);
+  }
+
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#site-nav');
+
+  if (toggle && nav) {
+    const navOrder = [
+      'index.html',
+      'nosotros.html',
+      'equipo.html',
+      'servicios.html',
+      'actividades.html',
+      'instalaciones.html',
+      'visitas.html',
+      'ingreso.html',
+      'tarifas.html',
+      'testimonios.html',
+      'preguntas-frecuentes.html',
+      'contacto.html'
+    ];
+    const links = [...nav.querySelectorAll('a')];
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    links
+      .sort((first, second) => navOrder.indexOf(first.getAttribute('href')) - navOrder.indexOf(second.getAttribute('href')))
+      .forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+          link.setAttribute('aria-current', 'page');
+        }
+        nav.append(link);
+      });
+
+    const closeMenu = () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    nav.addEventListener('click', event => {
+      if (event.target instanceof HTMLAnchorElement) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+  }
+
+  document.querySelectorAll('[data-year]').forEach(element => {
+    element.textContent = new Date().getFullYear();
+  });
+
+  const topButton = document.querySelector('.top-button');
+  if (topButton) {
+    window.addEventListener('scroll', () => {
+      topButton.classList.toggle('visible', window.scrollY > 450);
+    });
+    topButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+});
+
+  </script>
+  <script>
+// La navegación por teclado, el enlace para saltar al contenido y los estados de foco están incluidos en el sitio.
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('#contact-form');if(!form)return;form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const subject=encodeURIComponent('Consulta desde el sitio web');const body=encodeURIComponent(`Nombre: ${data.get('nombre')}\nCorreo: ${data.get('correo')}\nTeléfono: ${data.get('telefono')||'No indicado'}\n\nMensaje:\n${data.get('mensaje')}`);const status=document.querySelector('#form-status');status.textContent='El formulario no envía datos automáticamente. Para enviarlo, configurá una dirección oficial de correo en el sitio o copiá la información preparada.';const a=document.createElement('a');a.href=`mailto:?subject=${subject}&body=${body}`;a.textContent='Abrir aplicación de correo con el mensaje preparado';a.className='button';status.appendChild(document.createElement('br'));status.appendChild(a);});});
+  </script>
+</body></html>
